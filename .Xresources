@@ -1,0 +1,12 @@
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+URxvt*geometry: 80x24
+URxvt*depth: 32
+URxvt*background: [90]Black
+URxvt*foreground: White
+URxvt*scrollBar: false
