@@ -13,6 +13,8 @@ alias grep='grep --color=auto'
 alias refresh='sudo pacman -Syu'
 #Refreshes my ~/.Xresources
 alias xup="xrdb ~/.Xresources"
+#Lists only the hidden files
+alias ls.="ls -ld .?*"
 
 
 #Adds username, @, hostname, :, [, directory, ], :
