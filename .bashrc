@@ -14,7 +14,7 @@ alias refresh='sudo pacman -Syu'
 #Refreshes my ~/.Xresources
 alias xup="xrdb ~/.Xresources"
 #Lists only the hidden files
-alias ls.="ls -ld .?*"
+alias ls.="ls -d .?*"
 
 
 #Adds username, @, hostname, :, [, directory, ], :
