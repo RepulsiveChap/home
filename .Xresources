@@ -1,4 +1,4 @@
-Xft.dpi: 96
+#Xft.dpi: 96
 #Xft.antialias: true
 Xft.hinting: true
 Xft.rgba: rgb
@@ -10,5 +10,5 @@ URxvt*depth: 32
 URxvt*background: [90]Black
 URxvt*foreground: White
 URxvt*scrollBar: false
-URxvt.font: 9x15
+URxvt.font: 9x25
 URxvt.font: xft:droidsansmono:size=11
