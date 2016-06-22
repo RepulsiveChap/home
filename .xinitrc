@@ -1,5 +1,5 @@
 setxkbmap se
-xrdb -merge /home/joel/.Xresources
+xrdb ~/.Xresources
 setxkbmap -option caps:escape
 source $HOME/.bashrc
 exec i3
