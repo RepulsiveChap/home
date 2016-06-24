@@ -97,8 +97,8 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 set $tag1 1: Main
-set $tag2 2: Browse
-set $tag3 3: Music
+set $tag2 2: Terminal
+set $tag3 3: Browse
 set $tag4 4: Visual
 set $tag5 5: Music
 set $tag6 6: Code1
