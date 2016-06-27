@@ -7,3 +7,4 @@ exec i3
 #exec startkde
 setxkbmap se
 feh --bg-scale Pictures/archlinuxbackground.png
+emacs
