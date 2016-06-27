@@ -15,6 +15,11 @@ alias refresh='sudo pacman -Syu'
 alias xup="xrdb ~/.Xresources"
 #Lists only the hidden files
 alias ls.="ls -d .?*"
+#Install program
+alias install="sudo pacman -S"
+#Remove program and all config and dependencies
+alias remove="sudo pacman -Rns"
+
 
 
 #Adds username, @, hostname, :, [, directory, ], :
