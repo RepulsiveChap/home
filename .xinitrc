@@ -6,5 +6,4 @@ exec i3
 #exec startxfce4
 #exec startkde
 setxkbmap se
-feh --bg-scale Pictures/archlinuxbackground.png
-
+feh --bg-scale Pictures/basicarchbackground.png
