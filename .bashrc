@@ -19,7 +19,8 @@ alias ls.="ls -d .?*"
 alias install="sudo pacman -S"
 #Remove program and all config and dependencies
 alias remove="sudo pacman -Rns"
-
+#Takes a video and streams only the sound
+alias music="mpv --no-video"
 
 
 #Adds username, @, hostname, :, [, directory, ], :

@@ -35,10 +35,22 @@ bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
+
+
+#A few of my custom configs
+#########################################################################
 # Lock the scren
 bindsym Mod1+Ctrl+Delete exec i3lock -c 000000
 #sets background
-exec --no-startup-id feh --bg-scale ~/Pictures/archlinuxbackground.png
+exec --no-startup-id feh --bg-scale ~/Pictures/basicarchbackground.png
+#Starts the compton daemon
+exec compton -b
+#Opens emacs on boot on the first workspace (1: Main)
+exec --no-startup-id i3-msg 'workspace $tag1; exec emacs'
+#Removes the top bar of each window
+new_window 1pixel
+##########################################################################
+
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
@@ -184,7 +196,3 @@ bar {
 	# Using custom i3status.conf
 	status_command i3status -c ~/.config/i3/i3status.conf
 }
-
-#Removes the top bar of each window
-new_window 1pixel
-
