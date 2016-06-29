@@ -17,6 +17,9 @@
 ;;;Changes the white background to black and black text to white
 (add-to-list 'default-frame-alist '(foreground-color . "#ffffff"))
 (add-to-list 'default-frame-alist '(background-color . "#000000"))
+;;;Removes ido-mode to search other directories
 (setq ido-auto-merge-work-directories-length -1)
+;;;Adds line numbers
 (global-linum-mode 1)
+;;;Adds space between linennumber and code
 (setq-default linum-format "%d ")
