@@ -195,4 +195,6 @@ bar {
 	position bottom
 	# Using custom i3status.conf
 	status_command i3status -c ~/.config/i3/i3status.conf
+
+
 }
