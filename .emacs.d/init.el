@@ -17,3 +17,6 @@
 ;;;Changes the white background to black and black text to white
 (add-to-list 'default-frame-alist '(foreground-color . "#ffffff"))
 (add-to-list 'default-frame-alist '(background-color . "#000000"))
+(setq ido-auto-merge-work-directories-length -1)
+(global-linum-mode 1)
+(setq-default linum-format "%d ")
