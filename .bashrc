@@ -1,4 +1,4 @@
-#
+# Repulsive Chap .bashrc config
 # ~/.bashrc
 #
 
@@ -21,6 +21,8 @@ alias install="sudo pacman -S"
 alias remove="sudo pacman -Rns"
 #Takes a video and streams only the sound
 alias music="mpv --no-video"
+#Downloads music
+alias dmusic="youtube-dl -x"
 
 
 #Adds username, @, hostname, :, [, directory, ], :
