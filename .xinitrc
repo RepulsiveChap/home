@@ -1,6 +1,7 @@
 setxkbmap se
 xrdb ~/.Xresources
-setxkbmap -option caps:escape
+setxkbmap -option ctrl:nocaps
+#setxkbmap -option caps:escape
 source $HOME/.bashrc
 exec i3
 #exec startxfce4
