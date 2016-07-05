@@ -1,7 +1,12 @@
 setxkbmap se
 xrdb ~/.Xresources
+
+#Replaces caps to control (emacs config)
 setxkbmap -option ctrl:nocaps
+
+#Replaces caps to escape (vim config)
 #setxkbmap -option caps:escape
+
 source $HOME/.bashrc
 exec i3
 #exec startxfce4
