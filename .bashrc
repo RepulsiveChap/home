@@ -5,6 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+#screenfetch
 #Adds color to the ls command
 alias ls='ls --color=auto'
 #Adds color the the grep command
