@@ -3,7 +3,7 @@ xrdb ~/.Xresources
 
 #Replaces caps to control (emacs config)
 setxkbmap -option ctrl:nocaps
-
+#setxkbmap -option ctrl:none
 #Replaces caps to escape (vim config)
 #setxkbmap -option caps:escape
 
