@@ -51,6 +51,8 @@ exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
 exec compton -b
 #Opens emacs on boot on the first workspace (1: Main)
 exec --no-startup-id i3-msg 'workspace $tag1; exec emacs'
+exec --no-startup-id i3-msg 'workspace @tag2; exec urxvt -hold -e bash -c "screenfetch && bash"'
+#bindsym exec urxvt -hold -e bash -c 'screenfetch && bash'
 #Removes the top bar of each window
 new_window 1pixel
 ##########################################################################
