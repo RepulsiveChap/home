@@ -32,12 +32,12 @@ URxvt*color12: #6464FF // blue
 URxvt*color13: #FF00FF // magenta
 URxvt*color14: #00FFFF // cyan
 URxvt*color15: #FFFFFF // white
-rofi.color-normal: #032232,  #ffffff, #032232,  #02121a,  #ffffff
-##Background, foreground, background alt, highlight background, highlight foreground
+rofi.color-normal: #1f2025,  #ffffff, #1f2025,  #1793d1,  #ffffff
+ ##Background, foreground, background alt, highlight background, highlight foreground
 rofi.padding: 0
-rofi.color-window: #000000, #000000
-rofi.font: droidsansmono
+rofi.color-window: #1f2025, #1f2025
 rofi.fuzzy: true
 rofi.hide-scrollbar: true
-rofi.opacity: 100
-rofi.separator-style: none
+rofi.opacity: 95
+rofi.width: 30
+rofi.lines: 10
