@@ -1,3 +1,4 @@
+##Xft
 Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
@@ -5,17 +6,17 @@ Xft.rgba: rgb
 Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
+
+##Urxvt
 URxvt*geometry: 80x24
 URxvt*depth: 32
 URxvt*background: [90]Black
 URxvt*foreground: White
 URxvt*scrollBar: false
-
 URxvt.font: 9x12
 URxvt.font: xft:droidsansmono:size=12
 
-
-
+##Urxvt colors
 URxvt*color0:  #000000 // black
 URxvt*color1:  #B40000 // red
 URxvt*color2:  #00AA00 // green
@@ -32,8 +33,11 @@ URxvt*color12: #6464FF // blue
 URxvt*color13: #FF00FF // magenta
 URxvt*color14: #00FFFF // cyan
 URxvt*color15: #FFFFFF // white
+
+##Rofi
 rofi.color-normal: #1f2025,  #ffffff, #1f2025,  #1793d1,  #ffffff
- ##Background, foreground, background alt, highlight background, highlight foreground
+##Background, foreground, background alt, highlight background, highlight foreground
+
 rofi.padding: 0
 rofi.color-window: #1f2025, #1f2025
 rofi.fuzzy: true
