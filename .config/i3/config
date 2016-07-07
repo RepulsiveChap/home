@@ -58,8 +58,6 @@ new_window 1pixel
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
-
-#bindsym $mod+d exec rofi -show run -opacity 85 -bc "#007ff" -font "pango:droidsansmono 11"
 bindsym $mod+d exec rofi -show run
 
 
