@@ -4,7 +4,11 @@
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
 #
-
+#Background Blue color #224ae2
+#Arch blue color #1793d1
+#Gray color #1f2025
+#light gray #222222
+#
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
@@ -42,7 +46,7 @@ bindsym $mod+Shift+q kill
 # Lock the scren
 bindsym Mod1+Ctrl+Delete exec i3lock -c 000000
 #sets background
-exec --no-startup-id feh --bg-scale ~/Pictures/basicarchbackground.png
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
 #Starts the compton daemon
 exec compton -b
 #Opens emacs on boot on the first workspace (1: Main)
@@ -53,10 +57,10 @@ new_window 1pixel
 
 
 # start dmenu (a program launcher)
-#bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec dmenu_run
 
 #bindsym $mod+d exec rofi -show run -opacity 85 -bc "#007ff" -font "pango:droidsansmono 11"
-bindsym $mod+d exec rofi -show run
+#bindsym $mod+d exec rofi -show run
 
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
@@ -186,12 +190,12 @@ bindsym $mod+r mode "resize"
 bar {
 	colors {
 		# Whole color settings
-		background #032232
+		background #1f2025
 		statusline #ffffff
 		separator  #666666
 
 		# Type             border  background font
-		focused_workspace  #008fff #007fff #ffffff
+		focused_workspace  #008fff #1793d1 #ffffff
 		active_workspace   #333333 #5f676a #ffffff
 		inactive_workspace #333333 #222222 #888888
 		urgent_workspace   #aa0000 #990000 #ffffff
