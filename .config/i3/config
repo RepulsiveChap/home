@@ -28,6 +28,8 @@ font pango:droidsansmono 11
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
 # clear in small sizes. However, its unicode glyph coverage is limited, the old
+
+
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
@@ -43,6 +45,9 @@ bindsym $mod+Shift+q kill
 
 #A few of my custom configs
 #########################################################################
+
+font pango:droidsansmono 11
+
 # Lock the scren
 bindsym Mod1+Ctrl+Delete exec i3lock -c 000000
 #sets background
@@ -51,7 +56,7 @@ exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
 exec compton -b
 #Opens emacs on boot on the first workspace (1: Main)
 exec --no-startup-id i3-msg 'workspace $tag1; exec emacs'
-exec --no-startup-id i3-msg 'workspace @tag2; exec urxvt -hold -e bash -c "screenfetch && bash"'
+exec --no-startup-id i3-msg 'workspace $tag2; exec urxvt -hold -e bash -c "screenfetch && bash"'
 #bindsym exec urxvt -hold -e bash -c 'screenfetch && bash'
 #Removes the top bar of each window
 new_window 1pixel
