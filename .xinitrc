@@ -1,4 +1,5 @@
 setxkbmap se
+xbindkeys
 xrdb ~/.Xresources
 
 #Replaces caps to control (emacs config)
@@ -12,4 +13,4 @@ exec i3
 #exec startxfce4
 #exec startkde
 setxkbmap se
-feh --bg-scale Pictures/basicarchbackground.png
+feh --bg-scale Pictures/wallpaper.png

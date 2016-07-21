@@ -14,7 +14,7 @@ URxvt*background: [90]Black
 URxvt*foreground: White
 URxvt*scrollBar: false
 URxvt.font: 9x12
-URxvt.font: xft:droidsansmono:size=12
+URxvt.font: xft:inconsolata:size=12
 
 ##Urxvt colors
 URxvt*color0:  #000000 // black

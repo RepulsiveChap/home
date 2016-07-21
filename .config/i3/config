@@ -18,7 +18,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:droidsansmono 11
+font pango:inconsolatinconsolata 11
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -45,7 +45,7 @@ bindsym $mod+Shift+q kill
 
 #A few of my custom configs
 #########################################################################
-
+exec ~/Scripts/batt.sh
 font pango:droidsansmono 11
 
 # Lock the scren
@@ -56,7 +56,7 @@ exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
 exec compton -b
 #Opens emacs on boot on the first workspace (1: Main)
 exec --no-startup-id i3-msg 'workspace $tag1; exec emacs'
-exec --no-startup-id i3-msg 'workspace $tag2; exec urxvt -hold -e bash -c "screenfetch && bash"'
+#exec --no-startup-id i3-msg 'workspace $tag2; exec urxvt -hold -e bash -c "screenfetch && bash"'
 #bindsym exec urxvt -hold -e bash -c 'screenfetch && bash'
 #Removes the top bar of each window
 new_window 1pixel
