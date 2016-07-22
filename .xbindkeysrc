@@ -1,0 +1,18 @@
+#Decrease brightness
+"xbacklight -dec 10"
+    m:0x40 + c:233
+
+
+#Increace brightness
+"xbacklight -inc 10"
+    m:0x40 + c:233
+
+#Increase volume
+"pamixer --increase 5"
+    m:0x4 + c:123
+
+#Decrease volume
+"pamixer --decrease 5"
+    m:0x4 + c:122
+
+
