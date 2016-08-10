@@ -15,5 +15,5 @@
     m:0x40 + c:122
 
 #Toggle mute
-"pamixer --mute"
+"pamixer --toggle-mute"
     m:0x40 + c:121
