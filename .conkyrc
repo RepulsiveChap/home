@@ -30,20 +30,21 @@ override_utf8_locale no
 # number of cpu samples to average
 # set to 1 to disable averaging
 cpu_avg_samples 2
-
+color1 
 # Stuff after 'TEXT' will be formatted on screen
 TEXT
-
+#     
 # JSON for i3bar
-
 [
 { "full_text" : "Home${fs_free /home}"		, "color" : "\#ffffff", "separator" : false},
 { "full_text" : "${kernel}"              	, "color" : "\#ffffff", "separator" : false},
 { "full_text" : "ip: ${gw_ip}"			, "color" : "\#ffffff", "separator" : false},
+{ "full_text" : "Up:${downspeedf wlp4s0}"	, "color" : "\#ffffff", "separator" : false},
+{ "full_text" : "Down:${upspeedf wlp4s0}"	, "color" : "\#ffffff", "separator" : false},
 { "full_text" : "CPU ${cpu cpu0}%"              , "color" : "\#ffffff", "separator" : false},
 { "full_text" : "RAM ${memperc}%"               , "color" : "\#ffffff", "separator" : false},
-{ "full_text" : " ${battery_short BAT0}"	, "color" : "\#ffffff", "separator" : false},
-{ "full_text" : " ${battery_short BAT1}"  	, "color" : "\#ffffff", "separator" : false},
+{ "full_text" : " ${battery_percent BAT0}"	, "color" : "\#ffffff", "separator" : false},
+{ "full_text" : " ${battery_percent BAT1}"  	, "color" : "\#ffffff", "separator" : false},
 { "full_text" : "${time %H:%M:%S}"              , "color" : "\#ffffff", "separator" : false}],
 
 
