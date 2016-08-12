@@ -1,7 +1,7 @@
 setxkbmap se
 xbindkeys
 xrdb ~/.Xresources
-
+pulseaudio --start
 #Replaces caps to control (emacs config)
 setxkbmap -option ctrl:nocaps
 #setxkbmap -option ctrl:none
