@@ -53,11 +53,11 @@ bindsym Mod1+Ctrl+Delete exec i3lock -c 000000
 #sets background
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
 #Starts the network manager applet in the i3bar
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 #Starts the compton daemon
 exec compton -b
 #Opens emacs on boot on the first workspace (1: Main)
-exec --no-startup-id i3-msg 'workspace $tag1; exec emacs'
+#exec --no-startup-id i3-msg 'workspace $tag1; exec emacs'
 #exec --no-startup-id i3-msg 'workspace $tag2; exec urxvt -hold -e bash -c "screenfetch && bash"'
 #bindsym exec urxvt -hold -e bash -c 'screenfetch && bash'
 #Removes the top bar of each window
@@ -210,8 +210,8 @@ bar {
 	# i3bar position
 	#position bottom
 	# Using custom i3status.conf
-	#status_command i3status -c ~/.config/i3/i3status.conf
-	status_command $HOME/Scripts/conky-i3bar
+	status_command i3status -c ~/.config/i3/i3status.conf
+	#status_command $HOME/Scripts/conky-i3bar
 	#separator_symbol ":|:"
 
 

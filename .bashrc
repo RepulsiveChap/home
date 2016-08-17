@@ -18,6 +18,8 @@ alias xup="xrdb ~/.Xresources"
 alias ls.="ls -d .?*"
 #Install program
 alias i="sudo pacman -S"
+#Search programs
+alias s="sudo pacman -Ss"
 #Remove program and all config and dependencies
 alias remove="sudo pacman -Rns"
 #Takes a video and streams only the sound
