@@ -18,6 +18,8 @@ alias xup="xrdb ~/.Xresources"
 alias ls.="ls -d .?*"
 #Install program
 alias i="sudo pacman -S"
+#Starts nvimrc
+alias vim="nvim"
 #Search programs
 alias s="sudo pacman -Ss"
 #Remove program and all config and dependencies
@@ -30,11 +32,3 @@ alias dmusic="youtube-dl -x --audio-format vorbis --restrict-filenames"
 export PS1="\[\033[38;5;1m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\h:\[$(tput sgr0)\]\[\033[38;5;6m\][\w]:\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 #Adds my normal script directory to $PATH
 export PATH=$PATH:$HOME/Scripts
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0

@@ -5,7 +5,7 @@ pulseaudio --start
 #Replaces caps to control (emacs config)
 #setxkbmap -option ctrl:nocaps
 #setxkbmap -option ctrl:none
-Replaces caps to escape (vim config)
+#Replaces caps to escape (vim config)
 setxkbmap -option caps:escape
 xset r rate 200 75
 source $HOME/.bashrc

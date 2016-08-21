@@ -1,5 +1,4 @@
-"Repulsive Chaps .vimrc config
-set nocompatible
+"Saft .vimrc config
 syntax on
 set number
 filetype plugin indent on
@@ -13,6 +12,8 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 map <C-n> :NERDTreeToggle<CR>
+map <Tab> :bn<CR>
+map <S-Tab> :bp<CR>
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
@@ -35,9 +36,25 @@ Plugin 'VundleVim/Vundle.vim'
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
 "Plugin 'ascenator/L9', {'name': 'newL9'}
+"MY OWN PLUGINS
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-surround'
+Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+"END MY PLUGINS
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:airline_section_b = '%{strftime("%c")}'
+let g:airline_section_y = 'BN: %{bufnr("%")}'
+let g:airline#extensions#tabline#enabled = 1
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -52,3 +69,4 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+imap <tab> :bn <CR>
