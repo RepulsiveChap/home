@@ -8,12 +8,13 @@
 
 #Increase volume
 "pamixer --increase 5"
-    m:0x40 + c:123
+    m:0x40 + c:69
 
 #Decrease volume
 "pamixer --decrease 5"
-    m:0x40 + c:122
+    m:0x40 + c:68
 
 #Toggle mute
 "pamixer --toggle-mute"
-    m:0x40 + c:121
+    m:0x40 + c:66
+
