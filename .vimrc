@@ -2,6 +2,7 @@
 syntax on
 set number
 filetype plugin indent on
+filetype plugin on
 set hidden
 "Use :set paste if you want to copy text
 "With more than 1 line without fucking it up
@@ -14,6 +15,9 @@ call vundle#begin()
 map <C-n> :NERDTreeToggle<CR>
 map <Tab> :bn<CR>
 map <S-Tab> :bp<CR>
+set clipboard=unnamedplus
+let mapleader=","
+
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
@@ -42,6 +46,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-surround'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'scrooloose/nerdcommenter'
 "END MY PLUGINS
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -69,4 +74,3 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-imap <tab> :bn <CR>
