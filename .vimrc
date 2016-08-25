@@ -1,6 +1,9 @@
 "Saft .vimrc config
+" Enables syntax
 syntax on
+" Enables row numer
 set number
+" Enables things
 filetype plugin indent on
 filetype plugin on
 set hidden
@@ -12,11 +15,19 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+" Keybind to toggle nerdtree
 map <C-n> :NERDTreeToggle<CR>
+" Keybind to switch to the next buffer
 map <Tab> :bn<CR>
+" Keybind to switch to the previous buffee
 map <S-Tab> :bp<CR>
+" Copy paste from X
 set clipboard=unnamedplus
+" change leader from \ to ,
 let mapleader=","
+tnoremap <Esc> <C-\><C-n>
+" Open find file thing
+"map <C-ö> :CtrlP<CR>
 
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -40,6 +51,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
 "Plugin 'ascenator/L9', {'name': 'newL9'}
+"
 "MY OWN PLUGINS
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
@@ -47,6 +59,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'kien/ctrlp.vim'
 "END MY PLUGINS
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
