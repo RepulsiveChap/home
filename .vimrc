@@ -1,4 +1,5 @@
 "Saft .vimrc config
+"
 " Enables syntax
 syntax on
 " Enables row numer
@@ -22,10 +23,12 @@ map <Tab> :bn<CR>
 " Keybind to switch to the previous buffee
 map <S-Tab> :bp<CR>
 " Copy paste from X
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
 " change leader from \ to ,
 let mapleader=","
+" Esc to exit insert mode in terminal
 tnoremap <Esc> <C-\><C-n>
+"Datk theme for airline
 " Open find file thing
 "map <C-ö> :CtrlP<CR>
 
@@ -73,6 +76,7 @@ let g:syntastic_check_on_wq = 0
 let g:airline_section_b = '%{strftime("%c")}'
 let g:airline_section_y = 'BN: %{bufnr("%")}'
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='dark'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -87,3 +91,5 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+let g:airline_theme='simple'
+hi Search cterm=NONE ctermfg=black ctermbg=white
