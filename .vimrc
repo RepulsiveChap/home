@@ -1,6 +1,7 @@
 "Saft .vimrc config
 "
 " Enables syntax
+" tester
 syntax on
 " Enables row numer
 set number
