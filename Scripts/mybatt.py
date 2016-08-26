@@ -11,7 +11,6 @@ bats = len(files)-1
 def power():
     power = 0;
     for num in range(0, bats):
-        # print(num)
         temp = DIR+"BAT"+str(num)+"/power_now"
         a = open(temp, 'r')
         power = power + int(a.read())
@@ -34,6 +33,12 @@ def now():
         now = now + int(a.read())
     return now
 
+
+def percentage(nowbat, fullbat):
+    output = str(int(nowbat/fullbat*100))+"%"
+    return output
+
+
 def status():
     output = ''
     status = []
@@ -42,7 +47,7 @@ def status():
         a = open(temp, 'r')
         b = a.read()
         status.append(b)
-    
+
     if 'Discharging\n' in status:
         output = 'Discharging' 
         return output
@@ -52,6 +57,7 @@ def status():
     else:
         output = 'Charging'
         return output
+
 
 def timeleft(now, power, state, full):
     if state == 'Discharging':
@@ -63,19 +69,23 @@ def timeleft(now, power, state, full):
 
 
 def formattime(time):
-    print(time)
     timetuple = math.modf(time)
     minutes = (((timetuple[0])/10)*6)
     finh=int(timetuple[1])
     finm=int(minutes*100)
     output = str(finh)+ ":"+ str(finm)
     return output
-while True:
-    fpower = power()
-    ffull = full()
-    fnow = now()
-    fstatus = status()
-    ftimeleft = timeleft(fnow, fpower, fstatus, ffull)
-    formated = formattime(ftimeleft)
-    print(formated)
-    time.sleep(1)
+
+
+fpower = power()
+ffull = full()
+fnow = now()
+fstatus = status()
+ftimeleft = timeleft(fnow, fpower, fstatus, ffull)
+formated = formattime(ftimeleft)
+battery = percentage(fnow, ffull)
+# print(formated)
+# print(battery)
+# print(fstatus)
+final = fstatus + " " + battery + " " + formated
+print(final)

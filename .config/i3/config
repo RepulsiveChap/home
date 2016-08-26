@@ -211,7 +211,8 @@ bar {
 	# i3bar position
 	#position bottom
 	# Using custom i3status.conf
-	status_command i3status -c ~/.config/i3/i3status.conf
+	#status_command i3status -c ~/.config/i3/i3status.conf
+	status_command i3blocks
 	#status_command $HOME/Scripts/conky-i3bar
 	#separator_symbol ":|:"
 
