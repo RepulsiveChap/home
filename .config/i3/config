@@ -54,7 +54,7 @@ bindsym Mod1+Ctrl+Delete exec i3lock -c 000000
 #sets background
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
 #Starts the network manager applet in the i3bar
-#exec --no-startup-id nm-applet
+exec --no-startup-id nm-applet
 #Starts the compton daemon
 exec compton -b
 #Opens emacs on boot on the first workspace (1: Main)
