@@ -73,6 +73,7 @@ def formattime(time):
     minutes = (((timetuple[0])/10)*6)
     finh=int(timetuple[1])
     finm=int(minutes*100)
+    finm = "%02d" % (finm)
     output = str(finh)+ ":"+ str(finm)
     return output
 
