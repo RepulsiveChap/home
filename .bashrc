@@ -19,7 +19,7 @@ alias ls.="ls -d .?*"
 #Install program
 alias i="sudo pacman -S"
 #Starts my brightness script
-alias b="sudo brightness.py"
+alias b="sudo mybrightness.py"
 #Starts nvimrc
 alias vim="nvim"
 #Search programs

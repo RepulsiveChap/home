@@ -34,5 +34,7 @@ def maxbrightness():
     maxbrightness = int(a.read())
     return maxbrightness
 
-
-run()
+if change > 0 and change <= 100:
+    run()
+else: 
+    print("Bad value: ", change)
