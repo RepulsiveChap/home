@@ -16,10 +16,10 @@ alias refresh='sudo pacman -Syu'
 alias xup="xrdb ~/.Xresources"
 #Lists only the hidden files
 alias ls.="ls -d .?*"
-#Jakob
-alias jakobärfin="yes yolo"
 #Install program
 alias i="sudo pacman -S"
+#Starts my brightness script
+alias b="sudo brightness.py"
 #Starts nvimrc
 alias vim="nvim"
 #Search programs

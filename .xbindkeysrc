@@ -1,20 +1,19 @@
 #Decrease brightness
 "xbacklight -dec 25"
-    m:0x40 + c:232
+    m:0x4 + c:71
 
 #Increace brightness
 "xbacklight -inc 25"
-    m:0x40 + c:233
+    m:0x4 + c:72
 
 #Increase volume
 "pamixer --increase 5"
-    m:0x40 + c:69
+    m:0x4 + c:123
 
 #Decrease volume
 "pamixer --decrease 5"
-    m:0x40 + c:68
+    m:0x4 + c:122
 
 #Toggle mute
 "pamixer --toggle-mute"
-    m:0x40 + c:66
-
+    m:0x4 + c:67
