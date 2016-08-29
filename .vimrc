@@ -23,6 +23,8 @@ map <C-n> :NERDTreeToggle<CR>
 map <Tab> :bn<CR>
 " Keybind to switch to the previous buffee
 map <S-Tab> :bp<CR>
+" Adds the rewrite as sudo command with big W
+command W w !sudo tee % > /dev/null
 " Copy paste from X
 "set clipboard=unnamedplus
 " change leader from \ to ,
