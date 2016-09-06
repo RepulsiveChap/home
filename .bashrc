@@ -7,7 +7,7 @@
 
 #screenfetch
 #Adds color to the ls command
-alias ls='ls --color=auto'
+alias ls='ls -l --color=auto'
 #Adds color the the grep command
 alias grep='grep --color=auto'
 #Refreshes the system
