@@ -53,6 +53,7 @@ font pango:droidsansmono 11
 bindsym Mod1+Ctrl+Delete exec i3lock -c 000000
 #sets background
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
+exec --no-startup-id telegram-desktop 
 #Starts the network manager applet in the i3bar
 exec --no-startup-id nm-applet
 #Starts the compton daemon
