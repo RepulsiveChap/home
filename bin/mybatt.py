@@ -35,7 +35,7 @@ def now():
 
 
 def percentage(nowbat, fullbat):
-    output = str(int(nowbat/fullbat*100))+"%"
+    output = str(int(nowbat/fullbat*100))
     return output
 
 
@@ -78,6 +78,29 @@ def formattime(time):
     return output
 
 
+
+#This function is only used if I want to use another
+#output with ttf-font-awesome
+def fancypercent(percent):
+    #     
+    percent = int(percent)
+    if percent >= 90:
+        output = ""
+
+    if percent < 90 and percent >= 75:
+        output = ""
+
+    if percent < 75 and percent >= 50:
+        output = ""
+
+    if percent < 50 and percent >= 25:
+        output = ""
+
+    if percent < 25:
+        output = ""
+
+    return output
+
 fpower = power()
 ffull = full()
 fnow = now()
@@ -85,8 +108,15 @@ fstatus = status()
 ftimeleft = timeleft(fnow, fpower, fstatus, ffull)
 formated = formattime(ftimeleft)
 battery = percentage(fnow, ffull)
+# print(fancybattery)
+# print(fancypercent(int(battery)))
 # print(formated)
 # print(battery)
 # print(fstatus)
-final = fstatus + " " + battery + " " + formated
+final = fstatus + " " + battery + "% " + formated
+
+# Uncomment these two lines below to use the ttf-font-awesome output.
+# fancybattery = fancypercent(battery)
+# final = fancybattery + " " + formated
+
 print(final)
