@@ -99,7 +99,13 @@ def fancypercent(percent):
     if percent < 25:
         output = ""
 
+    if percent < 10:
+        sendnotification()
     return output
+
+
+def sendnotification():
+    os.system("/usr/bin/notify-send -t 0 -u normal 'Your battery level is critical'")    
 
 fpower = power()
 ffull = full()
@@ -107,12 +113,15 @@ fnow = now()
 fstatus = status()
 ftimeleft = timeleft(fnow, fpower, fstatus, ffull)
 formated = formattime(ftimeleft)
+
 battery = percentage(fnow, ffull)
 # print(fancybattery)
 # print(fancypercent(int(battery)))
 # print(formated)
 # print(battery)
 # print(fstatus)
+if int(battery) < 10:
+    sendnotification()
 final = fstatus + " " + battery + "% " + formated
 
 # Uncomment these two lines below to use the ttf-font-awesome output.

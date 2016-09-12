@@ -11,6 +11,7 @@ filetype plugin indent on
 filetype plugin on
 set hidden
 set clipboard+=unnamedplus
+color desert
 "Use :set paste if you want to copy text
 "With more than 1 line without fucking it up
 set nocompatible              " be iMproved, required
