@@ -5,6 +5,12 @@
 # This is an early "Grötig" version meaning there is a lot of
 # cleaning todo. 
 
+
+# Examples
+# td add "Remember to do task 2b from math"
+# td rm 0
+# td ls
+
 import os, os.path
 import datetime
 from time import gmtime, strftime
