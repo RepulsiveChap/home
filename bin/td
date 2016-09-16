@@ -1,0 +1,64 @@
+#!/bin/python
+
+# This is a simple program to add notes and todo stuff. 
+# You can add, remove and list the values you added to your list
+# This is an early "Grötig" version meaning there is a lot of
+# cleaning todo. 
+
+import os, os.path
+import datetime
+from time import gmtime, strftime
+import sys
+
+
+def readline():
+    for line in tasks:
+        awdawd.append(line)
+
+
+def writetask(value):
+    length = len(awdawd)
+    main = value
+    time = strftime("%Y-%m-%d %H:%M:%S")
+    out = str(length) + "\t" +  time + "\t" + main + "\n"
+    f = open(path, 'r+')
+    temp = f.read()
+    f.write(out)
+    f.close()
+
+
+def writelist():
+    f = open(path, 'w')
+    for element in awdawd:
+        f.write(element)
+
+
+def check():
+    if firstmod == "add":
+        secondmod = sys.argv[2]
+        writetask(secondmod)
+
+        
+    if firstmod == "remove" or firstmod == "rm":
+        secondmod = int(sys.argv[2])
+        removetask(secondmod)
+
+    if firstmod == "list" or firstmod == "ls":
+        print("Id\t" + "Date\t\t\t" + "Content")
+        for line in awdawd:
+            print (line)
+
+
+def removetask(id):
+    print("removing: " + awdawd[id])
+    awdawd.pop(id)
+    writelist()
+
+
+#Hardcoded path
+path = '/home/saft/bin/.taskfile'
+tasks = open(path, 'r')
+awdawd = []
+firstmod = sys.argv[1] 
+readline()
+check()
