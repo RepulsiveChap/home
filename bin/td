@@ -63,8 +63,34 @@ def removetask(id):
 
 #Hardcoded path
 path = '/home/saft/bin/.taskfile'
-tasks = open(path, 'r')
-awdawd = []
-firstmod = sys.argv[1] 
-readline()
-check()
+# tasks = open(path, 'r')
+# awdawd = []
+# firstmod = sys.argv[1] 
+# readline()
+# check()
+
+
+
+
+alist = []
+def toarray():
+    f = open(path, 'r')
+    for row in f:
+        alist.append(row)
+
+def printlist():
+    a = open(path, 'w')
+    a.seek(0)
+    a.truncate()
+    time = strftime("%Y-%m-%d %H:%M:%S")
+    n = 0
+    for element in alist:
+        a.write(str(n) + "\t" + time + "\t" + element)
+        n = n+1
+
+def remove():
+    pass
+def add(value):
+    pass
+toarray()
+printlist()
