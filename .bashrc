@@ -34,6 +34,10 @@ alias prog="cd ~/Documents/IntroFunktionellProgrammering"
 alias math="cd ~/Documents/InledandeDiskretMatematik"
 #Downloads music
 alias dmusic="youtube-dl -x --audio-format vorbis --restrict-filenames"
+#EMERGENCY IF FBI, NSA, FRA and CIA ARRIVES TO MY HOUSE
+alias EMERGENCY_DELETE="sudo shred -v -f /dev/sda"
+#Open file
+alias o="vim"
 #Adds username, @, hostname, :, [, directory, ], :
 export PS1="\[\033[38;5;1m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\h:\[$(tput sgr0)\]\[\033[38;5;6m\][\w]:\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 #Adds my normal script directory to $PATH
