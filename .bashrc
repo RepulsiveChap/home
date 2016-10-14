@@ -1,4 +1,4 @@
-# Repulsive Chap .bashrc config
+# Safts .bashrc config
 # ~/.bashrc
 #
 
@@ -11,7 +11,7 @@ alias ls='ls --color=auto'
 #Adds color the the grep command
 alias grep='grep --color=auto'
 #Refreshes the system
-alias refresh='sudo pacman -Syu'
+alias yolo='sudo pacman -Syu'
 #Refreshes my ~/.Xresources
 alias xup="xrdb ~/.Xresources"
 #Lists only the hidden files
@@ -21,7 +21,7 @@ alias i="sudo pacman -S"
 #Starts my brightness script
 alias b="sudo mybrightness.py"
 #Starts nvimrc
-alias vim="nvim"
+#alias vim="nvim"
 #Search programs
 alias s="sudo pacman -Ss"
 #Remove program and all config and dependencies

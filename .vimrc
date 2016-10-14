@@ -29,14 +29,17 @@ map <C-n> :NERDTreeToggle<CR>
 map <Tab> :bn<CR>
 " Keybind to switch to the previous buffee
 map <S-Tab> :bp<CR>
+
+"nnoremap <expr> <S-l> ':%s/' . input('Search: ') . '/' . input('Replace: ') . '/g' 
 " Adds the rewrite as sudo command with big W
-command W w !sudo tee % > /dev/null
+"command W w !sudo tee % > /dev/null
+
 " Copy paste from X
 "set clipboard=unnamedplus
 " change leader from \ to ,
 let mapleader=","
 " Esc to exit insert mode in terminal
-tnoremap <Esc> <C-\><C-n>
+"tnoremap <Esc> <C-\><C-n>
 "Datk theme for airline
 " Open find file thing
 "map <C-ö> :CtrlP<CR>
@@ -85,7 +88,9 @@ let g:syntastic_check_on_wq = 0
 let g:airline_section_b = '%{strftime("%c")}'
 let g:airline_section_y = 'BN: %{bufnr("%")}'
 let g:airline#extensions#tabline#enabled = 1
+"let g:airline_powerline_fonts = 1
 let g:airline_theme='dark'
+set laststatus=2
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -102,3 +107,8 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 let g:airline_theme='simple'
 hi Search cterm=NONE ctermfg=black ctermbg=lightblue
+execute pathogen#infect()
+""""Default: /Applications/Arduino.app/Contents/Resources/Java
+"let g:vim_arduino_library_path = /usr/share/arduino/
+""""Default: result of `$(ls /dev/tty.* | grep usb)`
+"let g:vim_arduino_serial_port = /dev/tty*
