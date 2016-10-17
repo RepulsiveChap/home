@@ -115,12 +115,23 @@ ftimeleft = timeleft(fnow, fpower, fstatus, ffull)
 formated = formattime(ftimeleft)
 
 battery = percentage(fnow, ffull)
+
+
+
+
+### DEBUGGING ###
 # print(fancybattery)
 # print(fancypercent(int(battery)))
 # print(formated)
 # print(battery)
 # print(fstatus)
-if int(battery) < 10:
+
+
+
+
+
+
+if (int(battery) < 10 and fstatus == "Discharging"):
     sendnotification()
 final = fstatus + " " + battery + "% " + formated
 

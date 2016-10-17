@@ -71,7 +71,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-surround'
-Plugin 'bling/vim-airline'
+"Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/ctrlp.vim'
@@ -85,11 +86,12 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-let g:airline_section_b = '%{strftime("%c")}'
-let g:airline_section_y = 'BN: %{bufnr("%")}'
+"let g:airline_section_b = '%{strftime("%c")}'
+"let g:airline_section_y = 'BN: %{bufnr("%")}'
 let g:airline#extensions#tabline#enabled = 1
 "let g:airline_powerline_fonts = 1
-let g:airline_theme='dark'
+"let g:airline_theme='dark'
+let g:airline_theme='simple'
 set laststatus=2
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -105,10 +107,4 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-let g:airline_theme='simple'
 hi Search cterm=NONE ctermfg=black ctermbg=lightblue
-execute pathogen#infect()
-""""Default: /Applications/Arduino.app/Contents/Resources/Java
-"let g:vim_arduino_library_path = /usr/share/arduino/
-""""Default: result of `$(ls /dev/tty.* | grep usb)`
-"let g:vim_arduino_serial_port = /dev/tty*
