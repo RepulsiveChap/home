@@ -46,10 +46,3 @@ export PATH=$PATH:$HOME/.cabal/bin
 export PATH=$HOME/bin:$PATH
 EDITOR=vim
 
-#echo "hej yes" 
-#echo "jag har yessat till din hårddisk" 
-#echo "LOVE <3" 
-
-#echo "jag är inte straight"
-#alias i3locknew ""
-#alias i3lock ""
