@@ -130,7 +130,6 @@ battery = percentage(fnow, ffull)
 
 
 
-
 if (int(battery) < 10 and fstatus == "Discharging"):
     sendnotification()
 final = fstatus + " " + battery + "% " + formated

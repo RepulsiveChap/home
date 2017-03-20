@@ -11,6 +11,8 @@ xmodmap ~/.Xmodmap
 xset r rate 200 75
 source $HOME/.bashrc
 exec i3
+#sxhkd &
+#exec bspwm
 #exec openbox-session
 #exec startxfce4
 #exec startkde

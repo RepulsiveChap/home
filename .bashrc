@@ -41,6 +41,15 @@ alias o="vim"
 #Adds username, @, hostname, :, [, directory, ], :
 export PS1="\[\033[38;5;1m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\h:\[$(tput sgr0)\]\[\033[38;5;6m\][\w]:\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 #Adds my normal script directory to $PATH
-export PATH=$PATH:$HOME/bin
+#export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/.cabal/bin
-EDITOR=nvim
+export PATH=$HOME/bin:$PATH
+EDITOR=vim
+
+#echo "hej yes" 
+#echo "jag har yessat till din hårddisk" 
+#echo "LOVE <3" 
+
+#echo "jag är inte straight"
+#alias i3locknew ""
+#alias i3lock ""

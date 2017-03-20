@@ -1,10 +1,14 @@
+
 "Saft .vimrc config
 "
-" Enables syntax
+
+ "Enables syntax
 " tester
 syntax on
 set tabstop=4
 set shiftwidth=4
+" Used to fix the SHIFT-o bug thingy
+set timeout timeoutlen=5000 ttimeoutlen=100
 set softtabstop=4
 set expandtab
 " Enables row numer
@@ -76,6 +80,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/ctrlp.vim'
+"Plugin 'wincent/command-t'
 "END MY PLUGINS
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
