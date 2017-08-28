@@ -1,5 +1,6 @@
-#!/bin/python
+#!/usr/bin/python
 import os, os.path
+import decimal
 import math
 import time
 
@@ -35,7 +36,7 @@ def now():
 
 
 def percentage(nowbat, fullbat):
-    output = str(int(nowbat/fullbat*100))
+    output = str(int((float(nowbat)/float(fullbat)*100)))
     return output
 
 
@@ -62,13 +63,14 @@ def status():
 def timeleft(now, power, state, full):
     if state == 'Discharging':
         time = 0;
-        time = now/power
+        time = float(now)/float(power)
         return time
     if state == 'Charging':
-        return ((full-now)/power)
+        return ((float(full-now))/float(power))
 
 
 def formattime(time):
+    time = time;
     timetuple = math.modf(time)
     minutes = (((timetuple[0])/10)*6)
     finh=int(timetuple[1])
@@ -79,31 +81,6 @@ def formattime(time):
 
 
 
-#This function is only used if I want to use another
-#output with ttf-font-awesome
-def fancypercent(percent):
-    #     
-    percent = int(percent)
-    if percent >= 90:
-        output = ""
-
-    if percent < 90 and percent >= 75:
-        output = ""
-
-    if percent < 75 and percent >= 50:
-        output = ""
-
-    if percent < 50 and percent >= 25:
-        output = ""
-
-    if percent < 25:
-        output = ""
-
-    if percent < 10:
-        sendnotification()
-    return output
-
-
 def sendnotification():
     os.system("/usr/bin/notify-send -t 0 -u normal 'Your battery level is critical'")    
 
@@ -112,6 +89,7 @@ ffull = full()
 fnow = now()
 fstatus = status()
 ftimeleft = timeleft(fnow, fpower, fstatus, ffull)
+
 formated = formattime(ftimeleft)
 
 battery = percentage(fnow, ffull)
@@ -130,8 +108,6 @@ battery = percentage(fnow, ffull)
 
 
 
-if (int(battery) < 10 and fstatus == "Discharging"):
-    sendnotification()
 final = fstatus + " " + battery + "% " + formated
 
 # Uncomment these two lines below to use the ttf-font-awesome output.

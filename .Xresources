@@ -13,8 +13,8 @@ URxvt*depth: 32
 URxvt*background: [90]Black
 URxvt*foreground: White
 URxvt*scrollBar: false
-URxvt.font: 9x12
-URxvt.font: xft:inconsolata:size=14
+##URxvt.font: 9x16
+URxvt.font: xft:inconsolata:size=16
 
 ##Rofi
 rofi.color-normal: #1f2025,  #ffffff, #1f2025,  #1793d1,  #ffffff

@@ -17,15 +17,15 @@ alias xup="xrdb ~/.Xresources"
 #Lists only the hidden files
 alias ls.="ls -d .?*"
 #Install program
-alias i="sudo pacman -S"
+alias i="sudo apt install"
 #Starts my brightness script
 alias b="sudo mybrightness.py"
 #Starts nvimrc
 #alias vim="nvim"
 #Search programs
-alias s="sudo pacman -Ss"
+alias s="sudo apt search"
 #Remove program and all config and dependencies
-alias remove="sudo pacman -Rns"
+alias remove="sudo apt remove"
 #Takes a video and streams only the sound
 alias music="mpv --no-video"
 #Moves to the prog directory
