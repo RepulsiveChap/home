@@ -42,6 +42,7 @@ map <S-Tab> :bp<CR>
 "set clipboard=unnamedplus
 " change leader from \ to ,
 let mapleader=","
+map <leader>l :!pdflatex % <CR>
 " Esc to exit insert mode in terminal
 "tnoremap <Esc> <C-\><C-n>
 "Datk theme for airline

@@ -7,11 +7,13 @@
 
 #screenfetch
 #Adds color to the ls command
+#alias ls='ls --color=auto'
 alias ls='ls --color=auto'
 #Adds color the the grep command
-alias grep='grep --color=auto'
+alias grep='nej så gör man inte'
+#alias grep='grep --color=auto'
 #Refreshes the system
-alias yolo='sudo pacman -Syu'
+alias yolo='sudo apt update && sudo apt upgrade && sudo apt dist-upgrade'
 #Refreshes my ~/.Xresources
 alias xup="xrdb ~/.Xresources"
 #Lists only the hidden files
