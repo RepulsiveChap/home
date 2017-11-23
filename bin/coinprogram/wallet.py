@@ -35,3 +35,6 @@ class Wallet(object):
             self.walletArray.append(returnValue)
 
         return returnValue
+    
+    def editWallet(self):
+        os.system("vim .wallet")
