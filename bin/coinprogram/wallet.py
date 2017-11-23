@@ -5,13 +5,13 @@ from parser import Parser
 class Wallet(object):
     def __init__(self):
         self.walletArray = [100]
-        if not(os.path.isfile(".wallet")):
-            self.wallet=open('.wallet', 'w')
+        if not(os.path.isfile("/home/saft/bin/coinprogram/.wallet")):
+            self.wallet=open('/home/saft/bin/coinprogram/.wallet', 'w')
             self.wallet.close()
 
     def calculateWorth(self, parser):
         self.parser = parser
-        self.wallet=open('.wallet','r')
+        self.wallet=open('/home/saft/bin/coinprogram/.wallet','r')
         walletlist = self.wallet.read().split('\n')
         self.wallet.close()
         walletlist.pop()
@@ -37,4 +37,4 @@ class Wallet(object):
         return returnValue
     
     def editWallet(self):
-        os.system("vim .wallet")
+        os.system("vim /home/saft/bin/coinprogram/.wallet")
