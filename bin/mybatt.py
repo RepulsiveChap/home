@@ -66,6 +66,8 @@ def timeleft(now, power, state, full):
         time = float(now)/float(power)
         return time
     if state == 'Charging':
+        if float(power) == 0:
+            return 0
         return ((float(full-now))/float(power))
 
 
@@ -89,10 +91,13 @@ ffull = full()
 fnow = now()
 fstatus = status()
 ftimeleft = timeleft(fnow, fpower, fstatus, ffull)
-
-formated = formattime(ftimeleft)
-
 battery = percentage(fnow, ffull)
+if ftimeleft != 0:
+    formated = formattime(ftimeleft)
+    final = fstatus + " " + battery + "% " + formated
+
+else:
+    final = fstatus + " " + battery + "%"
 
 
 
@@ -108,7 +113,6 @@ battery = percentage(fnow, ffull)
 
 
 
-final = fstatus + " " + battery + "% " + formated
 
 # Uncomment these two lines below to use the ttf-font-awesome output.
 # fancybattery = fancypercent(battery)

@@ -10,8 +10,7 @@
 #alias ls='ls --color=auto'
 alias ls='ls --color=auto'
 #Adds color the the grep command
-alias grep='nej så gör man inte'
-#alias grep='grep --color=auto'
+alias grep='grep --color=auto'
 #Refreshes the system
 alias yolo='sudo apt update && sudo apt upgrade && sudo apt dist-upgrade'
 #Refreshes my ~/.Xresources
@@ -21,7 +20,7 @@ alias ls.="ls -d .?*"
 #Install program
 alias i="sudo apt install"
 #Starts my brightness script
-alias b="sudo mybrightness.py"
+alias b="sudo /home/saft/bin/mybrightness.py"
 #Starts nvimrc
 #alias vim="nvim"
 #Search programs

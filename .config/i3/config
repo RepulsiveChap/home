@@ -49,6 +49,7 @@ bindsym $mod+Shift+q kill
 exec ~/Scripts/batt.sh
 font pango:droidsansmono 11
 
+
 # Lock the scren
 bindsym Mod1+Ctrl+Delete exec lockblank
 #sets background
