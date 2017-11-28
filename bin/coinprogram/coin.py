@@ -2,6 +2,7 @@
 from downloadsite import DownloadSite
 from parser import Parser
 from wallet import Wallet
+from expences import Expences
 import sys
 
 
@@ -13,6 +14,8 @@ decodedSite = site.getWebpage()
 parser = Parser(decodedSite)
 wallet = Wallet()
 worth = wallet.calculateWorth(parser)
+expences = Expences()
+dollar = 8.3
 # print(worth)
 
 
@@ -25,7 +28,13 @@ if len(sys.argv) == 2:
         print(worth)
     elif(sys.argv[1] == "e"):
         wallet.editWallet()
-
+    elif(sys.argv[1] == "expences"):
+        print(expences.calculateExpences())
+    elif(sys.argv[1] == "sum"):
+        sumExpences = expences.calculateExpences()
+        worth = wallet.calculateWorth(parser)
+        worth = worth * dollar
+        print(worth - sumExpences)
     else:
         parser.printValue(sys.argv[1] + "/")
 if len(sys.argv) > 2:
