@@ -1,8 +1,12 @@
 #!/usr/bin/python
-import os, os.path
-import decimal
+"""
+Path to python binary
+"""
+import os
+# import os.path
+# import decimal
 import math
-import time
+# import time
 
 DIR = '/sys/class/power_supply/'
 files = os.listdir(DIR)
@@ -10,7 +14,7 @@ bats = len(files)-1
 
 
 def power():
-    power = 0;
+    power = 0
     for num in range(0, bats):
         temp = DIR+"BAT"+str(num)+"/power_now"
         a = open(temp, 'r')
@@ -19,7 +23,7 @@ def power():
 
 
 def full():
-    full = 0;
+    full = 0
     for num in range(0, bats):
         temp = DIR+"BAT"+str(num)+"/energy_full"
         a = open(temp, 'r')
@@ -27,7 +31,7 @@ def full():
     return full
 
 def now():
-    now = 0;
+    now = 0
     for num in range(0, bats):
         temp = DIR+"BAT"+str(num)+"/energy_now"
         a = open(temp, 'r')
@@ -62,7 +66,7 @@ def status():
 
 def timeleft(now, power, state, full):
     if state == 'Discharging':
-        time = 0;
+        time = 0
         time = float(now)/float(power)
         return time
     if state == 'Charging':
@@ -72,7 +76,7 @@ def timeleft(now, power, state, full):
 
 
 def formattime(time):
-    time = time;
+    time = time
     timetuple = math.modf(time)
     minutes = (((timetuple[0])/10)*6)
     finh=int(timetuple[1])
