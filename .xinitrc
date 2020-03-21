@@ -14,8 +14,9 @@ exec i3
 #sxhkd &
 #exec bspwm
 #exec openbox-session
+#exec gnome-session
 #exec startxfce4
 #exec startkde
-setxkbmap se
-feh --bg-scale Pictures/wallpaper.png
-dunst
+#setxkbmap se
+#feh --bg-scale Pictures/wallpaper.png
+#dunst
