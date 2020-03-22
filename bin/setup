@@ -1,0 +1,21 @@
+#!/usr/bin/bash
+fundamentals=(
+    ssh
+    vim
+    xorg
+    git
+    emacs
+    i3blocks
+    rofi
+    rxvt-unicode
+)
+extensions=(
+    sshfs
+)
+
+echo "sudo apt install ${fundamentals[*]}"
+echo "sudo apt install ${extensions[*]}"
+
+rm -rf $HOME/.emacs.d
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+git clone https://github.com/saft23/home.git .
