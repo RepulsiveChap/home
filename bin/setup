@@ -11,11 +11,31 @@ fundamentals=(
 )
 extensions=(
     sshfs
+    python3-pip
 )
+pipextensions=(
+    afdko
+    fonttols
+    fontmake
+    fs
+)
+sudo apt install ${fundamentals[*]}
+sudo apt install ${extensions[*]}
+pip install ${pipextensions[*]}
 
-echo "sudo apt install ${fundamentals[*]}"
-echo "sudo apt install ${extensions[*]}"
+# Home dir
+cd $HOME
+git clone https://github.com/saft23/home.git .
 
+# Fonts
+cd $HOME
+mkdir -p .local
+git clone -b master https://github.com/adobe-fonts/source-code-pro.git .local
+cd $HOME/.local/source-code-pro
+./build.sh
+
+# Emacs
+cd $HOME
 rm -rf $HOME/.emacs.d
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
-git clone https://github.com/saft23/home.git .
+startx

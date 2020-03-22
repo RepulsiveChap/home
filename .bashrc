@@ -33,4 +33,5 @@ alias dmusic="youtube-dl -x --audio-format vorbis --restrict-filenames"
 export PS1="\[\033[38;5;1m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\h:\[$(tput sgr0)\]\[\033[38;5;6m\][\w]:\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 #Adds my normal script directory to $PATH
 export PATH=$HOME/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 EDITOR=vim
