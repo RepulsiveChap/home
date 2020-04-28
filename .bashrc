@@ -9,6 +9,10 @@
 #Adds color to the ls command
 #alias ls='ls --color=auto'
 alias ls='ls --color=auto'
+#Quick move up in working dir
+alias ..='cd ..'
+#Quick ls list
+alias ll='ls -la'
 #Adds color the the grep command
 alias grep='grep --color=auto'
 #Refreshes the system
